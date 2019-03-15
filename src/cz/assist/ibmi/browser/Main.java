@@ -27,12 +27,11 @@ public class Main {
 
 		PropertyConfigurator.configure(LogConfig.getLogPropertyFile());
 
-		LOGGER.debug("BEGIN");
+		LOGGER.debug("*** BEGIN ***");
 
 		TreeTableViewTest.showTree();
 
-		LOGGER.debug("END");
+		LOGGER.debug("*** END ***");
 
 	}
-
 }

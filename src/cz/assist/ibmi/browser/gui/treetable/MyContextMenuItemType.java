@@ -27,6 +27,9 @@ public class MyContextMenuItemType {
 	 * @param name
 	 */
 	public MyContextMenuItemType(String name) {
+
+		LOGGER.debug("name: " + name);
+
 		this.name = name;
 	}
 

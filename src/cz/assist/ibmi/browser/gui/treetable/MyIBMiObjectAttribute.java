@@ -23,6 +23,9 @@ public class MyIBMiObjectAttribute {
 	 * @param name
 	 */
 	public MyIBMiObjectAttribute(String name) {
+		
+		LOGGER.debug("name: " + name);
+		
 		this.name = name;
 	}
 

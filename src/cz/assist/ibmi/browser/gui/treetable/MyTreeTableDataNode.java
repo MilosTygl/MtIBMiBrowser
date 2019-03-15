@@ -21,6 +21,38 @@ public class MyTreeTableDataNode {
 
 	/**
 	 * 
+	 * @param xName
+	 * @param xType
+	 * @param xAttr
+	 * @param xText
+	 * @param xPath
+	 */
+	public MyTreeTableDataNode(String xName, String xType, String xAttr, String xText, String xPath) {
+		super();
+
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("xName: ");
+		stringBuilder.append(xName);
+		stringBuilder.append(", xType: ");
+		stringBuilder.append(xType);
+		stringBuilder.append(", xAttr: ");
+		stringBuilder.append(xAttr);
+		stringBuilder.append(", xText: ");
+		stringBuilder.append(xText);
+		stringBuilder.append(", xPath: ");
+		stringBuilder.append(xPath);
+
+		LOGGER.debug(stringBuilder.toString());
+
+		this.xNameProperty = new SimpleStringProperty(xName);
+		this.xTypeProperty = new SimpleStringProperty(xType);
+		this.xAttrProperty = new SimpleStringProperty(xAttr);
+		this.xTextProperty = new SimpleStringProperty(xText);
+		this.xPathProperty = new SimpleStringProperty(xPath);
+	}
+
+	/**
+	 * 
 	 * @return
 	 */
 	public SimpleStringProperty xNameProperty() {
@@ -72,38 +104,6 @@ public class MyTreeTableDataNode {
 			xPathProperty = new SimpleStringProperty(this, "xPathProperty");
 		}
 		return xPathProperty;
-	}
-
-	/**
-	 * 
-	 * @param xName
-	 * @param xType
-	 * @param xAttr
-	 * @param xText
-	 * @param xPath
-	 */
-	public MyTreeTableDataNode(String xName, String xType, String xAttr, String xText, String xPath) {
-		super();
-
-		StringBuilder stringBuilder = new StringBuilder();
-		stringBuilder.append("xName: ");
-		stringBuilder.append(xName);
-		stringBuilder.append(", xType: ");
-		stringBuilder.append(xType);
-		stringBuilder.append(", xAttr: ");
-		stringBuilder.append(xAttr);
-		stringBuilder.append(", xText: ");
-		stringBuilder.append(xText);
-		stringBuilder.append(", xPath: ");
-		stringBuilder.append(xPath);
-
-		LOGGER.debug(stringBuilder.toString());
-
-		this.xNameProperty = new SimpleStringProperty(xName);
-		this.xTypeProperty = new SimpleStringProperty(xType);
-		this.xAttrProperty = new SimpleStringProperty(xAttr);
-		this.xTextProperty = new SimpleStringProperty(xText);
-		this.xPathProperty = new SimpleStringProperty(xPath);
 	}
 
 	public String getxName() {

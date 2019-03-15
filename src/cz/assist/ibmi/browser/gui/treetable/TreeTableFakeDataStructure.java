@@ -13,6 +13,21 @@ public class TreeTableFakeDataStructure {
 
 	private static final Logger LOGGER = Logger.getLogger(TreeTableFakeDataStructure.class);
 
+	final TreeItem<MyTreeTableDataNode> root;
+
+	/**
+	 * 
+	 */
+	TreeTableFakeDataStructure() {
+
+		LOGGER.debug("begin");
+
+		root = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("[root]", null, null, null, null));
+
+		LOGGER.debug("end");
+
+	}
+
 	/**
 	 * 
 	 * @return
@@ -43,7 +58,6 @@ public class TreeTableFakeDataStructure {
 		item1.getChildren().add(item1sub2);
 
 		final TreeItem<MyTreeTableDataNode> item2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("QOpenSys", null, null, null, "/QOpenSys"));
-		final TreeItem<MyTreeTableDataNode> root = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("[root]", null, null, null, null));
 
 		root.getChildren().add(item1);
 		root.getChildren().add(item2);

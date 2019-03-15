@@ -26,6 +26,9 @@ public class MyIBMiObjectType {
 	 * @param name
 	 */
 	public MyIBMiObjectType(String name) {
+		
+		LOGGER.debug("name: " + name);
+		
 		this.name = name;
 	}
 

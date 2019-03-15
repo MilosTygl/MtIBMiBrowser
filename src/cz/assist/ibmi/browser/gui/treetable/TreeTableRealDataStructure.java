@@ -30,7 +30,19 @@ public class TreeTableRealDataStructure {
 	private long numberOfFiles;
 
 	private int currentLevel;
-	private final int treeMaxLevel = BrowserConfig.getTreeMaxLevel();
+	private final int treeMaxLevel;
+
+	/**
+	 * 
+	 */
+	TreeTableRealDataStructure() {
+
+		LOGGER.debug("begin");
+
+		treeMaxLevel = BrowserConfig.getTreeMaxLevel();
+
+		LOGGER.debug("end");
+	}
 
 	/**
 	 * 
