@@ -201,6 +201,7 @@ public class TreeTableViewTest extends Application {
 		LOGGER.debug("begin");
 
 		System.out.println("Context Menu | Expand | " + item.getxPath());
+		
 
 		LOGGER.debug("end");
 	}

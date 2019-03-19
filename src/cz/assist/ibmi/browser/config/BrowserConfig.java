@@ -11,6 +11,10 @@ public class BrowserConfig {
 
 	private static final Logger LOGGER = Logger.getLogger(BrowserConfig.class);
 
+	/**
+	 * 
+	 * @return
+	 */
 	public static boolean getRealData() {
 
 		LOGGER.debug("begin");
