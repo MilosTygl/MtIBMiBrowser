@@ -32,16 +32,6 @@ public class TreeTableViewTest extends Application {
 
 	/**
 	 * 
-	 */
-	TreeTableViewTest() {
-
-		LOGGER.debug("begin");
-
-		LOGGER.debug("end");
-	}
-
-	/**
-	 * 
 	 * @return
 	 */
 	private TreeTableView<MyTreeTableDataNode> createTreeTableViewFromFakeData() {

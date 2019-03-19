@@ -9,7 +9,7 @@ public class AppConfig {
 
 	private static final String APP_NAME = "MT IBM i Browser";
 	private static final String APP_VERSION = "beta 2019-03-15";
-	private static final String PROPERTY_FILE = "C:/mt-dev/_test/IBMiBrowserMT/conf/conf.properties";
+	private static final String PROPERTY_FILE = "C:/mt-dev/_test/MtIBMiBrowser/conf/conf.properties";
 
 	public static String getAppName() {
 		return APP_NAME;
