@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import cz.assist.ibmi.browser.config.LogConfig;
-import cz.assist.ibmi.browser.gui.treetable.TreeTableViewTest;
+import cz.assist.ibmi.browser.gui.treetable.MyTreeTableViewTest;
 
 /**
  * 
@@ -29,7 +29,7 @@ public class Main {
 
 		LOGGER.debug("*** BEGIN ***");
 
-		TreeTableViewTest.showTree();
+		MyTreeTableViewTest.showTree();
 
 		LOGGER.debug("*** END ***");
 

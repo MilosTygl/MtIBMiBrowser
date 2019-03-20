@@ -9,16 +9,16 @@ import javafx.scene.control.TreeItem;
  * @author milos.tygl
  *
  */
-public class TreeTableFakeDataStructure {
+public class MyTreeTableFakeDataStructure {
 
-	private static final Logger LOGGER = Logger.getLogger(TreeTableFakeDataStructure.class);
+	private static final Logger LOGGER = Logger.getLogger(MyTreeTableFakeDataStructure.class);
 
 	final TreeItem<MyTreeTableDataNode> root;
 
 	/**
 	 * 
 	 */
-	TreeTableFakeDataStructure() {
+	MyTreeTableFakeDataStructure() {
 
 		LOGGER.debug("begin");
 
@@ -69,6 +69,9 @@ public class TreeTableFakeDataStructure {
 		final TreeItem<MyTreeTableDataNode> item1sub5 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("USER5LIB.LIB", "*LIB", "PROD", "USER5 Current Library", "/QSYS.LIB/USER5LIB.LIB"));
 		item1.getChildren().add(item1sub5);
 
+		final TreeItem<MyTreeTableDataNode> item1sub6 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("USER6LIB.LIB", "*LIB", "PROD", "USER6 Current Library", "/QSYS.LIB/USER6LIB.LIB"));
+		item1.getChildren().add(item1sub6);
+
 		final TreeItem<MyTreeTableDataNode> item2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("QOpenSys", null, null, null, "/QOpenSys"));
 		root.getChildren().add(item2);
 
@@ -83,6 +86,15 @@ public class TreeTableFakeDataStructure {
 
 		final TreeItem<MyTreeTableDataNode> item2sub1sub3 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user3", null, null, null, "/QOpenSys/home/user3"));
 		item2sub1.getChildren().add(item2sub1sub3);
+
+		final TreeItem<MyTreeTableDataNode> item2sub1sub4 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user4", null, null, null, "/QOpenSys/home/user4"));
+		item2sub1.getChildren().add(item2sub1sub4);
+
+		final TreeItem<MyTreeTableDataNode> item2sub1sub5 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user5", null, null, null, "/QOpenSys/home/user5"));
+		item2sub1.getChildren().add(item2sub1sub5);
+
+		final TreeItem<MyTreeTableDataNode> item2sub1sub6 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user6", null, null, null, "/QOpenSys/home/user6"));
+		item2sub1.getChildren().add(item2sub1sub6);
 
 		final TreeItem<MyTreeTableDataNode> item2sub2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("opt", null, null, null, "/QOpenSys/opt"));
 		item2.getChildren().add(item2sub2);

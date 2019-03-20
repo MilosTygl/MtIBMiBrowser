@@ -26,9 +26,9 @@ import javafx.stage.Stage;
  * @author milos.tygl
  *
  */
-public class TreeTableViewTest extends Application {
+public class MyTreeTableViewTest extends Application {
 
-	private static final Logger LOGGER = Logger.getLogger(TreeTableViewTest.class);
+	private static final Logger LOGGER = Logger.getLogger(MyTreeTableViewTest.class);
 
 	/**
 	 * 
@@ -38,8 +38,8 @@ public class TreeTableViewTest extends Application {
 
 		LOGGER.debug("begin");
 
-		final TreeTableFakeDataStructure treeTableFakeDataStructure;
-		treeTableFakeDataStructure = new TreeTableFakeDataStructure();
+		final MyTreeTableFakeDataStructure treeTableFakeDataStructure;
+		treeTableFakeDataStructure = new MyTreeTableFakeDataStructure();
 
 		final TreeItem<MyTreeTableDataNode> root;
 		root = treeTableFakeDataStructure.generateFullDataStructure();
@@ -61,8 +61,8 @@ public class TreeTableViewTest extends Application {
 
 		LOGGER.debug("begin");
 
-		final TreeTableRealDataStructure treeTableRealDataStructure;
-		treeTableRealDataStructure = new TreeTableRealDataStructure();
+		final MyTreeTableRealDataStructure treeTableRealDataStructure;
+		treeTableRealDataStructure = new MyTreeTableRealDataStructure();
 
 		final TreeItem<MyTreeTableDataNode> root;
 		root = treeTableRealDataStructure.generateFullDataStructure();

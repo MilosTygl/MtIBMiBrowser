@@ -23,9 +23,9 @@ import javafx.scene.control.TreeItem;
  * @author milos.tygl
  *
  */
-public class TreeTableRealDataStructure {
+public class MyTreeTableRealDataStructure {
 
-	private static final Logger LOGGER = Logger.getLogger(TreeTableRealDataStructure.class);
+	private static final Logger LOGGER = Logger.getLogger(MyTreeTableRealDataStructure.class);
 
 	private long numberOfFiles;
 
@@ -35,7 +35,7 @@ public class TreeTableRealDataStructure {
 	/**
 	 * 
 	 */
-	TreeTableRealDataStructure() {
+	MyTreeTableRealDataStructure() {
 
 		LOGGER.debug("begin");
 
