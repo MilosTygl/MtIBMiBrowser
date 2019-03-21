@@ -22,7 +22,7 @@ public class MyTreeTableFakeDataStructure {
 
 		LOGGER.debug("begin");
 
-		root = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("[root]", null, null, null, null));
+		root = createNextLevelItem("[root]", null, null, null, null);
 
 		LOGGER.debug("end");
 
@@ -38,8 +38,14 @@ public class MyTreeTableFakeDataStructure {
 	 * @return
 	 */
 	public TreeItem<MyTreeTableDataNode> createNextLevelItem(String xName, String xType, String xAttr, String xText, String xPath) {
-		MyTreeTableDataNode ttdn = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
-		TreeItem<MyTreeTableDataNode> child = new TreeItem<MyTreeTableDataNode>(ttdn);
+
+		LOGGER.debug("begin");
+
+		var ttdn = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
+		var child = new TreeItem<MyTreeTableDataNode>(ttdn);
+
+		LOGGER.debug("end");
+
 		return child;
 	}
 
@@ -51,73 +57,73 @@ public class MyTreeTableFakeDataStructure {
 
 		LOGGER.debug("begin");
 
-		final TreeItem<MyTreeTableDataNode> item1 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("QSYS.LIB", "*LIB", "PROD", "System Library", "/QSYS.LIB"));
+		var item1 = createNextLevelItem("QSYS.LIB", "*LIB", "PROD", "System Library", "/QSYS.LIB");
 		root.getChildren().add(item1);
 
-		final TreeItem<MyTreeTableDataNode> item1sub1 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("USER1LIB.LIB", "*LIB", "PROD", "USER1 Current Library", "/QSYS.LIB/USER1LIB.LIB"));
+		var item1sub1 = createNextLevelItem("USER1LIB.LIB", "*LIB", "PROD", "USER1 Current Library", "/QSYS.LIB/USER1LIB.LIB");
 		item1.getChildren().add(item1sub1);
 
-		final TreeItem<MyTreeTableDataNode> item1sub1sub1 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("QCLSRC.FILE", "*FILE", "PF", "CL Sources", "/QSYS.LIB/USER1LIB.LIB/QCLSRC.FILE"));
+		var item1sub1sub1 = createNextLevelItem("QCLSRC.FILE", "*FILE", "PF", "CL Sources", "/QSYS.LIB/USER1LIB.LIB/QCLSRC.FILE");
 		item1sub1.getChildren().add(item1sub1sub1);
 
-		final TreeItem<MyTreeTableDataNode> item1sub1sub1sub1 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("TEST1.MBR", "*MBR", "CLP", "CL Program Example 1", "/QSYS.LIB/USER1LIB.LIB/QCLSRC.FILE/TEST1.MBR"));
+		var item1sub1sub1sub1 = createNextLevelItem("TEST1.MBR", "*MBR", "CLP", "CL Program Example 1", "/QSYS.LIB/USER1LIB.LIB/QCLSRC.FILE/TEST1.MBR");
 		item1sub1sub1.getChildren().add(item1sub1sub1sub1);
 
-		final TreeItem<MyTreeTableDataNode> item1sub1sub1sub2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("TEST2.MBR", "*MBR", "CLP", "CL Program Example 2", "/QSYS.LIB/USER1LIB.LIB/QCLSRC.FILE/TEST2.MBR"));
+		var item1sub1sub1sub2 = createNextLevelItem("TEST2.MBR", "*MBR", "CLP", "CL Program Example 2", "/QSYS.LIB/USER1LIB.LIB/QCLSRC.FILE/TEST2.MBR");
 		item1sub1sub1.getChildren().add(item1sub1sub1sub2);
 
-		final TreeItem<MyTreeTableDataNode> item1sub1sub2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("TEST1.PGM", "*PGM", "CLP", "CL Program Example 1", "/QSYS.LIB/USER1LIB.LIB/TEST1.PGM"));
+		var item1sub1sub2 = createNextLevelItem("TEST1.PGM", "*PGM", "CLP", "CL Program Example 1", "/QSYS.LIB/USER1LIB.LIB/TEST1.PGM");
 		item1sub1.getChildren().add(item1sub1sub2);
 
-		final TreeItem<MyTreeTableDataNode> item1sub1sub3 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("TEST2.PGM", "*PGM", "CLP", "CL Program Example 2", "/QSYS.LIB/USER1LIB.LIB/TEST2.PGM"));
+		var item1sub1sub3 = createNextLevelItem("TEST2.PGM", "*PGM", "CLP", "CL Program Example 2", "/QSYS.LIB/USER1LIB.LIB/TEST2.PGM");
 		item1sub1.getChildren().add(item1sub1sub3);
 
-		final TreeItem<MyTreeTableDataNode> item1sub2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("USER2LIB.LIB", "*LIB", "PROD", "USER2 Current Library", "/QSYS.LIB/USER2LIB.LIB"));
+		var item1sub2 = createNextLevelItem("USER2LIB.LIB", "*LIB", "PROD", "USER2 Current Library", "/QSYS.LIB/USER2LIB.LIB");
 		item1.getChildren().add(item1sub2);
 
-		final TreeItem<MyTreeTableDataNode> item1sub3 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("USER3LIB.LIB", "*LIB", "PROD", "USER3 Current Library", "/QSYS.LIB/USER3LIB.LIB"));
+		var item1sub3 = createNextLevelItem("USER3LIB.LIB", "*LIB", "PROD", "USER3 Current Library", "/QSYS.LIB/USER3LIB.LIB");
 		item1.getChildren().add(item1sub3);
 
-		final TreeItem<MyTreeTableDataNode> item1sub4 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("USER4LIB.LIB", "*LIB", "PROD", "USER4 Current Library", "/QSYS.LIB/USER4LIB.LIB"));
+		var item1sub4 = createNextLevelItem("USER4LIB.LIB", "*LIB", "PROD", "USER4 Current Library", "/QSYS.LIB/USER4LIB.LIB");
 		item1.getChildren().add(item1sub4);
 
-		final TreeItem<MyTreeTableDataNode> item1sub5 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("USER5LIB.LIB", "*LIB", "PROD", "USER5 Current Library", "/QSYS.LIB/USER5LIB.LIB"));
+		var item1sub5 = createNextLevelItem("USER5LIB.LIB", "*LIB", "PROD", "USER5 Current Library", "/QSYS.LIB/USER5LIB.LIB");
 		item1.getChildren().add(item1sub5);
 
-		final TreeItem<MyTreeTableDataNode> item1sub6 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("USER6LIB.LIB", "*LIB", "PROD", "USER6 Current Library", "/QSYS.LIB/USER6LIB.LIB"));
+		var item1sub6 = createNextLevelItem("USER6LIB.LIB", "*LIB", "PROD", "USER6 Current Library", "/QSYS.LIB/USER6LIB.LIB");
 		item1.getChildren().add(item1sub6);
 
-		final TreeItem<MyTreeTableDataNode> item2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("QOpenSys", null, null, null, "/QOpenSys"));
+		var item2 = createNextLevelItem("QOpenSys", null, null, null, "/QOpenSys");
 		root.getChildren().add(item2);
 
-		final TreeItem<MyTreeTableDataNode> item2sub1 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("home", null, null, null, "/QOpenSys/home"));
+		var item2sub1 = createNextLevelItem("home", null, null, null, "/QOpenSys/home");
 		item2.getChildren().add(item2sub1);
 
-		final TreeItem<MyTreeTableDataNode> item2sub1sub1 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user1", null, null, null, "/QOpenSys/home/user1"));
+		var item2sub1sub1 = createNextLevelItem("user1", null, null, null, "/QOpenSys/home/user1");
 		item2sub1.getChildren().add(item2sub1sub1);
 
-		final TreeItem<MyTreeTableDataNode> item2sub1sub2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user2", null, null, null, "/QOpenSys/home/user2"));
+		var item2sub1sub2 = createNextLevelItem("user2", null, null, null, "/QOpenSys/home/user2");
 		item2sub1.getChildren().add(item2sub1sub2);
 
-		final TreeItem<MyTreeTableDataNode> item2sub1sub3 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user3", null, null, null, "/QOpenSys/home/user3"));
+		var item2sub1sub3 = createNextLevelItem("user3", null, null, null, "/QOpenSys/home/user3");
 		item2sub1.getChildren().add(item2sub1sub3);
 
-		final TreeItem<MyTreeTableDataNode> item2sub1sub4 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user4", null, null, null, "/QOpenSys/home/user4"));
+		var item2sub1sub4 = createNextLevelItem("user4", null, null, null, "/QOpenSys/home/user4");
 		item2sub1.getChildren().add(item2sub1sub4);
 
-		final TreeItem<MyTreeTableDataNode> item2sub1sub5 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user5", null, null, null, "/QOpenSys/home/user5"));
+		var item2sub1sub5 = createNextLevelItem("user5", null, null, null, "/QOpenSys/home/user5");
 		item2sub1.getChildren().add(item2sub1sub5);
 
-		final TreeItem<MyTreeTableDataNode> item2sub1sub6 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("user6", null, null, null, "/QOpenSys/home/user6"));
+		var item2sub1sub6 = createNextLevelItem("user6", null, null, null, "/QOpenSys/home/user6");
 		item2sub1.getChildren().add(item2sub1sub6);
 
-		final TreeItem<MyTreeTableDataNode> item2sub2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("opt", null, null, null, "/QOpenSys/opt"));
+		var item2sub2 = createNextLevelItem("opt", null, null, null, "/QOpenSys/opt");
 		item2.getChildren().add(item2sub2);
 
-		final TreeItem<MyTreeTableDataNode> item3 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("QIBM", null, null, null, "/QIBM"));
+		var item3 = createNextLevelItem("QIBM", null, null, null, "/QIBM");
 		root.getChildren().add(item3);
 
-		final TreeItem<MyTreeTableDataNode> item4 = createNextLevelItem("QOPT", null, null, null, "/QOPT");
+		var item4 = createNextLevelItem("QOPT", null, null, null, "/QOPT");
 		root.getChildren().add(item4);
 
 		LOGGER.debug("end");

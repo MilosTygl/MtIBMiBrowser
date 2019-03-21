@@ -52,8 +52,7 @@ public class MyTreeTableRealDataStructure {
 
 		LOGGER.debug("begin");
 
-		final TreeItem<MyTreeTableDataNode> fullDataStructure;
-		fullDataStructure = generateRootDataStructure();
+		var fullDataStructure = generateRootDataStructure();
 
 		LOGGER.debug("end");
 
@@ -74,10 +73,8 @@ public class MyTreeTableRealDataStructure {
 		final boolean isRecursive = true;
 		final String entryPoint = "/";
 
-		final List<TreeItem<MyTreeTableDataNode>> treeItemsNextLevel;
-		treeItemsNextLevel = generatePartialDataStructure(entryPoint, isRecursive);
-
-		final TreeItem<MyTreeTableDataNode> root = getRootTreeItem();
+		var treeItemsNextLevel = generatePartialDataStructure(entryPoint, isRecursive);
+		var root = getRootTreeItem();
 		root.getChildren().addAll(treeItemsNextLevel);
 
 		System.out.println("numberOfFiles: " + numberOfFiles);
@@ -101,11 +98,8 @@ public class MyTreeTableRealDataStructure {
 		final String xText = null;
 		final String xPath = null;
 
-		final MyTreeTableDataNode rootTreeTableDataNode;
-		rootTreeTableDataNode = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
-
-		final TreeItem<MyTreeTableDataNode> rootTreeItem;
-		rootTreeItem = new TreeItem<MyTreeTableDataNode>(rootTreeTableDataNode);
+		var rootTreeTableDataNode = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
+		var rootTreeItem = new TreeItem<MyTreeTableDataNode>(rootTreeTableDataNode);
 
 		LOGGER.debug("end");
 
@@ -126,12 +120,8 @@ public class MyTreeTableRealDataStructure {
 		final String xText = null;
 		final String xPath = null;
 
-		final List<TreeItem<MyTreeTableDataNode>> dummyTreeItems;
-		dummyTreeItems = new ArrayList<TreeItem<MyTreeTableDataNode>>();
-
-		final MyTreeTableDataNode dummyTreeTableDataNode;
-		dummyTreeTableDataNode = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
-
+		var dummyTreeItems = new ArrayList<TreeItem<MyTreeTableDataNode>>();
+		var dummyTreeTableDataNode = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
 		dummyTreeItems.add(new TreeItem<MyTreeTableDataNode>(dummyTreeTableDataNode));
 
 		LOGGER.debug("end");
@@ -147,8 +137,7 @@ public class MyTreeTableRealDataStructure {
 
 		LOGGER.debug("begin");
 
-		final List<TreeItem<MyTreeTableDataNode>> dummyTreeItems;
-		dummyTreeItems = getDummyTreeItems();
+		var dummyTreeItems = getDummyTreeItems();
 
 		LOGGER.debug("end");
 
@@ -172,8 +161,7 @@ public class MyTreeTableRealDataStructure {
 		final ListFiles listFiles = new ListFiles();
 		final IFSFile[] ifsFiles = listFiles.listIfs(entryPoint);
 
-		final List<TreeItem<MyTreeTableDataNode>> treeItemCurrentLevel;
-		treeItemCurrentLevel = new ArrayList<TreeItem<MyTreeTableDataNode>>();
+		var treeItemCurrentLevel = new ArrayList<TreeItem<MyTreeTableDataNode>>();
 
 		if (ifsFiles != null) {
 			for (IFSFile ifsFile : ifsFiles) {
@@ -210,11 +198,8 @@ public class MyTreeTableRealDataStructure {
 				if (!isSymbolicLink) {
 					numberOfFiles++;
 
-					MyTreeTableDataNode currentTreeTableDataNode;
-					currentTreeTableDataNode = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
-
-					TreeItem<MyTreeTableDataNode> currentTreeItem;
-					currentTreeItem = new TreeItem<MyTreeTableDataNode>(currentTreeTableDataNode);
+					var currentTreeTableDataNode = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
+					var currentTreeItem = new TreeItem<MyTreeTableDataNode>(currentTreeTableDataNode);
 
 					if (isDirectory) {
 						if (currentLevel < 3) {

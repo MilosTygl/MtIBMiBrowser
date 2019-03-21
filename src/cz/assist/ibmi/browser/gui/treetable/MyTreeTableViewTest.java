@@ -14,7 +14,6 @@ import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.scene.Scene;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.TreeTableRow;
 import javafx.scene.control.TreeTableView;
@@ -38,14 +37,9 @@ public class MyTreeTableViewTest extends Application {
 
 		LOGGER.debug("begin");
 
-		final MyTreeTableFakeDataStructure treeTableFakeDataStructure;
-		treeTableFakeDataStructure = new MyTreeTableFakeDataStructure();
-
-		final TreeItem<MyTreeTableDataNode> root;
-		root = treeTableFakeDataStructure.generateFullDataStructure();
-
-		final TreeTableView<MyTreeTableDataNode> tree;
-		tree = new TreeTableView<MyTreeTableDataNode>(root);
+		var treeTableFakeDataStructure = new MyTreeTableFakeDataStructure();
+		var root = treeTableFakeDataStructure.generateFullDataStructure();
+		var tree = new TreeTableView<MyTreeTableDataNode>(root);
 		tree.setShowRoot(true);
 
 		LOGGER.debug("end");
@@ -61,14 +55,9 @@ public class MyTreeTableViewTest extends Application {
 
 		LOGGER.debug("begin");
 
-		final MyTreeTableRealDataStructure treeTableRealDataStructure;
-		treeTableRealDataStructure = new MyTreeTableRealDataStructure();
-
-		final TreeItem<MyTreeTableDataNode> root;
-		root = treeTableRealDataStructure.generateFullDataStructure();
-
-		final TreeTableView<MyTreeTableDataNode> tree;
-		tree = new TreeTableView<MyTreeTableDataNode>(root);
+		var treeTableRealDataStructure = new MyTreeTableRealDataStructure();
+		var root = treeTableRealDataStructure.generateFullDataStructure();
+		var tree = new TreeTableView<MyTreeTableDataNode>(root);
 		tree.setShowRoot(true);
 
 		LOGGER.debug("end");
@@ -201,7 +190,6 @@ public class MyTreeTableViewTest extends Application {
 		LOGGER.debug("begin");
 
 		System.out.println("Context Menu | Expand | " + item.getxPath());
-		
 
 		LOGGER.debug("end");
 	}
