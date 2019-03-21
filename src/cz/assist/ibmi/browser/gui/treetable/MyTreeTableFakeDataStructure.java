@@ -30,6 +30,21 @@ public class MyTreeTableFakeDataStructure {
 
 	/**
 	 * 
+	 * @param xName
+	 * @param xType
+	 * @param xAttr
+	 * @param xText
+	 * @param xPath
+	 * @return
+	 */
+	public TreeItem<MyTreeTableDataNode> createNextLevelItem(String xName, String xType, String xAttr, String xText, String xPath) {
+		MyTreeTableDataNode ttdn = new MyTreeTableDataNode(xName, xType, xAttr, xText, xPath);
+		TreeItem<MyTreeTableDataNode> child = new TreeItem<MyTreeTableDataNode>(ttdn);
+		return child;
+	}
+
+	/**
+	 * 
 	 * @return
 	 */
 	public TreeItem<MyTreeTableDataNode> generateFullDataStructure() {
@@ -98,6 +113,12 @@ public class MyTreeTableFakeDataStructure {
 
 		final TreeItem<MyTreeTableDataNode> item2sub2 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("opt", null, null, null, "/QOpenSys/opt"));
 		item2.getChildren().add(item2sub2);
+
+		final TreeItem<MyTreeTableDataNode> item3 = new TreeItem<MyTreeTableDataNode>(new MyTreeTableDataNode("QIBM", null, null, null, "/QIBM"));
+		root.getChildren().add(item3);
+
+		final TreeItem<MyTreeTableDataNode> item4 = createNextLevelItem("QOPT", null, null, null, "/QOPT");
+		root.getChildren().add(item4);
 
 		LOGGER.debug("end");
 
